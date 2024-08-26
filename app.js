@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 
-const allowedOrigins = ['http://localhost:3000', 'https://anotherdomain.com']
+const allowedOrigins = ['http://localhost:3000', 'https://test-front-lv0s.onrender.com']
 
 const corsOptions = {
   origin: (origin, callback) => {
@@ -30,7 +30,7 @@ app.use(cors(corsOptions))
 
 const progressBar = (id, percent, time) => `
 <span
-hx-get="http://localhost:8080/progress/${id}"
+hx-get="https://test-back-220v.onrender.com/progress/${id}"
 hx-trigger="every 600ms"
 hx-target="this"
 hx-swap="outerHTML"
